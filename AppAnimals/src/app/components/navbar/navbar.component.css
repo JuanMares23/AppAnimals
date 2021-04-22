@@ -1,0 +1,75 @@
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+/*==========================REUSABLE CLASSES===============================*/
+.line {
+  width: 0;
+  height: 3px;
+  background-color: var(--orange);
+  transition: 0.3s ease;
+}
+
+.active {
+  color: var(--orange) !important;
+}
+
+/*==========================NAVBAR===============================*/
+nav {
+  position: fixed;
+  left: 2%;
+  top: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  padding: 16px 24px;
+  background-color: var(--deep-light);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  z-index: 9999;
+}
+
+nav > img {
+  height: 30px;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 30%;
+  margin: 0 auto;
+}
+
+nav ul li {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--orange-light);
+  transition: 0.3s ease;
+}
+
+nav ul li:hover {
+  color: var(--orange);
+}
+
+nav ul li:hover .line {
+  width: 100%;
+}
+
+nav ul li.active .line {
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 10px;
+}
+
+.profile > img {
+  height: 30px;
+  cursor: pointer;
+}
