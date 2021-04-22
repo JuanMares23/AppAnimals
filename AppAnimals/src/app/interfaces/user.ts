@@ -16,8 +16,8 @@ export default interface User {
     noAdoptions: number
     creation_date: number
     status: boolean
-    savedPosts?: string[]
-    likedPosts?: string[]
+    savedPosts?: string[] // array de sus id's
+    likedPosts?: string[] // array de sus id's
     grade: number
     evaluations?: {
         count: number

@@ -3,7 +3,7 @@ export default interface Post {
     description: string
     creator: string
     creation_date: number //milliseconds
-    photo: string
+    photos?: string[]
     likes: {
         count: number
         vetsCount: number

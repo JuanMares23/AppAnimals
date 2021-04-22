@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +9,7 @@ import { environment } from 'src/environments/environment';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CaseCardComponent } from './components/case-card/case-card.component';
 import { InterestingPostsComponent } from './components/interesting-posts/interesting-posts.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire';
@@ -31,7 +30,7 @@ import { VetService } from './services/vet.service';
     AppComponent,
     NavbarComponent,
     CaseCardComponent,
-    InterestingPostsComponent
+    InterestingPostsComponent,
     HomeComponent
   ],
   imports: [

@@ -1,0 +1,7 @@
+<main class="main-container">
+    <app-case-card *ngFor="let item of items" [user]="item.user" [img]="item.img" [description]="item.description"
+        [vet]="item.vet" [caseId]="item.caseId"></app-case-card>
+    <app-interesting-posts></app-interesting-posts>
+</main>
+
+<aside></aside>

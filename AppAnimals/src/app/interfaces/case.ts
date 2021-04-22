@@ -3,15 +3,16 @@ import Info from './info';
 export default interface Case {
     title: string
     description: string
-    creator: string
+    creator: Info
     creation_date: number //milliseconds
-    photo: string
+    photos?: string[]
     likes: number
     views: number
     linkedVet?: Info
     linkedDate?: number // milliseconds
     status: 'success' | 'failure' | 'pending' | 'reported'
     diagnosis?: {
+        name: string
         symptoms: string[]
         medicines?: string[]
         surgery?: string

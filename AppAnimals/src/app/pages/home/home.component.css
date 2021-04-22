@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+/*==========================RESET===============================*/
+
+::ng-deep * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::ng-deep ::-webkit-scrollbar {
+  background-color: var(--light);
+  width: 12px;
+}
+
+::ng-deep ::-webkit-scrollbar-thumb {
+  background-color: var(--orange-light);
+  border-radius: 12px;
+}
+
+::ng-deep ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--orange);
+}
+
+/*==========================VARIABLES===============================*/
+
+::ng-deep :root {
+  --orange: #f79256;
+  --orange-light: #fbd1a2;
+  --green-light: #7dcfb6;
+  --bluegreen: #00b2ca;
+  --blue-light: #5b9bd5;
+  --blue: #1d4e89;
+  --dark: #1d242e;
+  --light: #f0f0f0;
+  --deep-light: #fbfbfb;
+  --red: #fba2a2;
+}
+
+.main-container {
+  width: 90%;
+  margin: 100px auto;
+}
