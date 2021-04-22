@@ -6,6 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 
+// Components
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { CaseCardComponent } from './components/case-card/case-card.component';
+import { InterestingPostsComponent } from './components/interesting-posts/interesting-posts.component';
+import { HomeComponent } from './home/home.component';
+
 // Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -20,12 +26,12 @@ import { ReportService } from './services/report.service';
 import { UserService } from './services/user.service';
 import { VetService } from './services/vet.service';
 
-// Components
-import { HomeComponent } from './home/home.component';
-
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    CaseCardComponent,
+    InterestingPostsComponent
     HomeComponent
   ],
   imports: [
@@ -33,11 +39,7 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    ReactiveFormsModule,
-    // RouterModule.forRoot([
-    //   { path: '/Home', component: HomeComponent },
-    //   // { path: 'products/:productId', component: ProductDetailsComponent },
-    // ])
+    ReactiveFormsModule
   ],
   providers: [AdoptionService, CaseService, DonationService, EvaluationService, PostService, ReportService, UserService, VetService],
   bootstrap: [AppComponent]
