@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+.avatar-img {
+  border-radius: 50%;
+}
+.bc-orangelight {
+  border: 3px solid var(--orange-light);
+}
+.bc-greenlight {
+  border: 3px solid var(--green-light);
+}
+.btn {
+  border-radius: 20px;
+  text-transform: capitalize;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 42px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn-green {
+  background-color: var(--green-light);
+}
+
+body {
+  background-color: #ddd;
+}
