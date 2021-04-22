@@ -1,0 +1,55 @@
+<div class="card">
+  <img [src]="img" alt="image" />
+  <div class="card-container">
+    <div class="user-profile">
+      <img
+        class="avatar-img bc-orangelight"
+        [src]="user.img"
+        alt="image-profile"
+      />
+      <div class="user-info">
+        <h4 class="username">{{ user.username }}</h4>
+        <p>{{ user.date }} • {{ user.place }}</p>
+      </div>
+    </div>
+    <p class="description">
+      {{ description }}
+    </p>
+
+    <div class="vinculated">
+      <img
+        [ngClass]="{ 'red-filter': !vet }"
+        src="assets/img/vinculated.png"
+        alt="vinculated"
+      />
+      <span>{{ vet ? "Vinculado" : "En proceso de vinculación" }}</span>
+    </div>
+
+    <div class="vinculation-container" *ngIf="vet">
+      <div class="vet-container">
+        <img class="avatar-img bc-greenlight" [src]="vet.img" alt="vet-image" />
+
+        <div class="pet-container">
+          <h4>{{ vet.vetname }}</h4>
+          <div class="pet-info">
+            <p>
+              Diagnóstico: <span>{{ vet.diagnosis }}</span>
+            </p>
+            <p>
+              Síntomas: <span>{{ vet.simptoms }}</span>
+            </p>
+            <p>
+              Medicamento: <span>{{ vet.medicine }}</span>
+            </p>
+            <p>
+              Costo por servicio: <span>{{ vet.price | currency }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <span id="btn-donate" class="btn btn-green"> DONAR </span>
+    </div>
+    <span id="case">{{ caseId }}</span>
+  </div>
+</div>
