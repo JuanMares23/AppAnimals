@@ -48,6 +48,7 @@ nav ul li {
   font-weight: bold;
   color: var(--orange-light);
   transition: 0.3s ease;
+  outline: none;
 }
 
 nav ul li:hover {

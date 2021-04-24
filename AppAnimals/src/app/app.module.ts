@@ -24,6 +24,7 @@ import { PostService } from './services/post.service';
 import { ReportService } from './services/report.service';
 import { UserService } from './services/user.service';
 import { VetService } from './services/vet.service';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { VetService } from './services/vet.service';
     NavbarComponent,
     CaseCardComponent,
     InterestingPostsComponent,
-    HomeComponent
+    HomeComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

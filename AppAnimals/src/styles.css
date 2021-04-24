@@ -14,6 +14,7 @@
   color: white;
   font-weight: bold;
   font-size: 18px;
+  text-decoration: none;
   padding: 8px 42px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
@@ -28,6 +29,20 @@
   background-color: var(--green-light);
 }
 
+.btn-orange {
+  background-color: var(--orange);
+}
+
+.px-24 {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
 body {
-  background-color: #ddd;
+  background: url(assets/img/footprint-bg.png);
+  background-color: #fbfbfb;
+}
+
+* {
+  scroll-behavior: smooth;
 }
