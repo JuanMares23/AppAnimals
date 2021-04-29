@@ -30,7 +30,10 @@
   bottom: 0;
   font-size: 24px;
   font-weight: bold;
+  max-width: 100%;
   width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
   padding: 12px;
   color: white;
   background: linear-gradient(transparent, black);

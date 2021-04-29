@@ -8,6 +8,9 @@
 .bc-greenlight {
   border: 3px solid var(--green-light);
 }
+.bc-white {
+  border: 3px solid white;
+}
 .btn {
   border-radius: 20px;
   text-transform: capitalize;
@@ -45,4 +48,9 @@ body {
 
 * {
   scroll-behavior: smooth;
+}
+
+.main-container {
+  width: 90%;
+  margin: 100px auto;
 }

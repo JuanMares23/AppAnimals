@@ -25,6 +25,8 @@ import { ReportService } from './services/report.service';
 import { UserService } from './services/user.service';
 import { VetService } from './services/vet.service';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+import { ProfilePopupComponent } from './components/profile-popup/profile-popup.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     CaseCardComponent,
     InterestingPostsComponent,
     HomeComponent,
-    InicioComponent
+    InicioComponent,
+    UserProfileComponent,
+    ProfilePopupComponent
   ],
   imports: [
     BrowserModule,
