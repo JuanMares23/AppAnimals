@@ -72,5 +72,21 @@ nav ul li.active .line {
 
 .profile > img {
   height: 30px;
-  cursor: pointer;
+}
+
+.profile:hover app-profile-popup,
+app-profile-popup:hover {
+  opacity: 100%;
+  pointer-events: all;
+}
+
+app-profile-popup {
+  position: fixed;
+  z-index: 9999;
+  right: 12px;
+  top: 7%;
+  opacity: 0;
+  font-weight: initial;
+  pointer-events: none;
+  transition: opacity 0.3s;
 }
