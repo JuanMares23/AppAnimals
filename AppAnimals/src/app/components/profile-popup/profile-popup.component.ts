@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-profile-popup',
   templateUrl: './profile-popup.component.html',
-  styleUrls: ['./profile-popup.component.css']
+  styleUrls: ['./profile-popup.component.css'],
 })
 export class ProfilePopupComponent implements OnInit {
+  constructor(public authService: AuthService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
