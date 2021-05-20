@@ -30,6 +30,7 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
 import { ProfilePopupComponent } from './components/profile-popup/profile-popup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfileGuard } from './guards/profile.guard';
+import { ComoAyudarComponent } from './pages/como-ayudar/como-ayudar.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ProfileGuard } from './guards/profile.guard';
     UserProfileComponent,
     ProfilePopupComponent,
     LoginComponent,
+    ComoAyudarComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,4 +66,4 @@ import { ProfileGuard } from './guards/profile.guard';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

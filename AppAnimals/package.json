@@ -7,16 +7,19 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build && firebase deploy --only hosting:prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.2.0",
+    "@angular/cdk": "^12.0.1",
     "@angular/common": "~10.2.0",
     "@angular/compiler": "~10.2.0",
     "@angular/core": "~10.2.0",
     "@angular/fire": "^6.1.4",
     "@angular/forms": "~10.2.0",
+    "@angular/material": "^12.0.1",
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",

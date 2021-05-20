@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "jumps-7c7d6"
+  },
+  "targets": {
+    "jumps-7c7d6": {
+      "hosting": {
+        "prod": [
+          "pet-jumps"
+        ],
+        "production": [
+          "jumps-7c7d6"
+        ]
+      }
+    }
   }
 }
