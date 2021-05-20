@@ -10,21 +10,24 @@
       <div class="line"></div>
     </li>
     <li routerLinkActive="active">
-      Usuarios Destacados
+      Veterinarias
       <div class="line"></div>
     </li>
     <li routerLinkActive="active">
-      GPS
+      Usuarios
+      <div class="line"></div>
+    </li>
+    <li routerLinkActive="active">
+      Blog
       <div class="line"></div>
     </li>
   </ul>
-  <div class="profile" *ngIf="authService.isLogged()">
+  <div class="profile" *ngIf="authService.isLogged() else loginBtn">
     {{ authService.user?.name }}
-    <img
-      class="avatar-img bc-orangelight"
-      [src]="authService.user?.photo"
-      alt="profile-img"
-    />
+    <img class="avatar-img bc-orangelight" [src]="authService.user?.photo" alt="profile-img" />
     <app-profile-popup></app-profile-popup>
+  </div>
+  <div class="profile" #loginBtn routerLink="/login">
+    <button class="login-btn">Login</button>
   </div>
 </nav>
