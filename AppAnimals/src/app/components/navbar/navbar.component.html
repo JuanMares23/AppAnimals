@@ -18,11 +18,11 @@
       <div class="line"></div>
     </li>
   </ul>
-  <div class="profile">
-    Lucía Sánchez
+  <div class="profile" *ngIf="authService.isLogged()">
+    {{ authService.user?.name }}
     <img
       class="avatar-img bc-orangelight"
-      src="https://thumbs.dreamstime.com/b/mujer-con-icono-de-port%C3%A1til-estilo-plano-del-ilustraci%C3%B3n-plana-vectorial-para-el-dise%C3%B1o-web-163519381.jpg"
+      [src]="authService.user?.photo"
       alt="profile-img"
     />
     <app-profile-popup></app-profile-popup>

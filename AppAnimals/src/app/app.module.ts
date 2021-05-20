@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
+import { DatePipe } from '@angular/common';
 
 // Components
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -27,6 +28,8 @@ import { VetService } from './services/vet.service';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { ProfilePopupComponent } from './components/profile-popup/profile-popup.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProfileGuard } from './guards/profile.guard';
 
 @NgModule({
   declarations: [
@@ -37,16 +40,28 @@ import { ProfilePopupComponent } from './components/profile-popup/profile-popup.
     HomeComponent,
     InicioComponent,
     UserProfileComponent,
-    ProfilePopupComponent
+    ProfilePopupComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [AdoptionService, CaseService, DonationService, EvaluationService, PostService, ReportService, UserService, VetService],
-  bootstrap: [AppComponent]
+  providers: [
+    AdoptionService,
+    CaseService,
+    DonationService,
+    EvaluationService,
+    PostService,
+    ReportService,
+    UserService,
+    VetService,
+    DatePipe,
+    ProfileGuard,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

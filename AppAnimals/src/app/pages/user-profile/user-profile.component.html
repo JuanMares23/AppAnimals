@@ -1,7 +1,7 @@
 <div class="main-container">
   <div class="cover-container">
     <img
-      src="https://i.pinimg.com/originals/f2/e2/5f/f2e25fa89ad3e970aeb994db60a81303.jpg"
+      src="https://es.postermywall.com/assets/images/landing-page/placeholder-image.png"
       alt=""
     />
     <div class="edit-cover">
@@ -10,10 +10,7 @@
     </div>
     <div class="main-photo">
       <div class="profile-img">
-        <img
-          src="https://micarrerauniversitaria.com/wp-content/uploads/2018/03/veterinario-1.gif"
-          alt=""
-        />
+        <img [src]="authService.user.photo" alt="" />
         <a class="edit-profile"
           ><i class="fa fa-camera" aria-hidden="true"></i
         ></a>
@@ -25,22 +22,28 @@
     <!--========================== MAIN CARD ==========================-->
     <div class="card">
       <div class="name">
-        <h1>Roberto Alejandro Pérez</h1>
+        <h1>{{ authService.user.name }}</h1>
         <div class="badge"></div>
       </div>
       <div class="email">
         <a><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        robertoperez@gmail.com
+        {{ authService.user.mail }}
       </div>
       <div class="phone">
         <a><i class="fa fa-phone" aria-hidden="true"></i></a>
-        667 1234 567
+        {{ authService.user.phone }}
       </div>
       <hr />
       <div class="info">
-        <h2>Casos: <small>12</small></h2>
-        <h2>Posts: <small>32</small></h2>
-        <h2>Adopciones: <small>5</small></h2>
+        <h2>
+          Casos: <small>{{ authService.user.noCases }}</small>
+        </h2>
+        <h2>
+          Posts: <small>{{ authService.user.noPosts }}</small>
+        </h2>
+        <h2>
+          Adopciones: <small>{{ authService.user.noAdoptions }}</small>
+        </h2>
       </div>
       <div class="footer-card">
         <div>
@@ -50,7 +53,10 @@
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
         </div>
-        <p>Miembro desde: 14 de abril del 2021</p>
+        <p>
+          Miembro desde:
+          {{ authService.user.creation_date | date }}
+        </p>
       </div>
     </div>
 

@@ -3,12 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProfileGuard } from './guards/profile.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: 'profile', component: UserProfileComponent },
+  {
+    path: 'profile',
+    component: UserProfileComponent,
+    canActivate: [ProfileGuard],
+  },
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: '/inicio' },
 ];
 
 @NgModule({
