@@ -5,7 +5,7 @@
       Inicio
       <div class="line"></div>
     </li>
-    <li routerLinkActive="active" routerLink="/home">
+    <li routerLinkActive="active" routerLink="/como-ayudar">
       ¿Cómo ayudar?
       <div class="line"></div>
     </li>
@@ -22,12 +22,12 @@
       <div class="line"></div>
     </li>
   </ul>
-  <div class="profile" *ngIf="authService.isLogged() else loginBtn">
+  <div class="profile" *ngIf="authService.isLogged()">
     {{ authService.user?.name }}
     <img class="avatar-img bc-orangelight" [src]="authService.user?.photo" alt="profile-img" />
     <app-profile-popup></app-profile-popup>
   </div>
-  <div class="profile" #loginBtn routerLink="/login">
+  <div class="profile" *ngIf="!authService.isLogged()" routerLink="/login">
     <button class="login-btn">Login</button>
   </div>
 </nav>
