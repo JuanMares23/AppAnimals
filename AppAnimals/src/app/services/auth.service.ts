@@ -33,7 +33,6 @@ export class AuthService {
           noPosts: 0,
           status: true,
         };
-        this.router.navigateByUrl('/profile');
       }
     });
   }
@@ -58,7 +57,7 @@ export class AuthService {
   AuthLogin(provider) {
     return this.afAuth
       .signInWithPopup(provider)
-      .then(async (result) => {})
+      .then(async (result) => { })
       .catch((error) => {
         console.log(error);
       });

@@ -5,11 +5,11 @@ import { AuthService } from '../services/auth.service';
 
 @Injectable()
 export class ProfileGuard implements CanActivate {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) { }
 
   canActivate() {
     if (!this.authService.isLogged()) {
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/inicio');
       return false;
     }
 
